@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Web Development Assignments</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">My Portfolio</h1>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="#assignments">Assignments</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h2>Welcome to My Web Development Journey</h2>
+            <p>Discover my projects and the work I’ve done so far.</p>
+        </div>
+    </section>
+
+    <section id="assignments" class="assignments-section">
+        <h2>Assignments</h2>
+        <div class="assignment-list">
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Portfolio Using HTML</h3>
+                    <p>A simple yet elegant portfolio created using HTML to showcase my skills and projects.</p>
+                    <a href="Lab 1/porfolio.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Table Using HTML</h3>
+                    <p>A structured layout displaying data using HTML tables for better organization and clarity.</p>
+                    <a href="Lab 2/table.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Form Using HTML</h3>
+                    <p>An interactive form designed with HTML to collect user inputs efficiently.</p>
+                    <a href="Lab 3/form.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Linking Webpages</h3>
+                    <p>A demonstration of linking multiple HTML pages to create a cohesive web experience.</p>
+                    <a href="Lab 4/home.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Working with HTML div Classes and ID</h3>
+                    <p>A project showcasing the use of div classes and IDs for structuring and styling HTML content.</p>
+                    <a href="Lab 5/home.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Designing Question Paper</h3>
+                    <p>A creative question paper layout designed using HTML to demonstrate styling techniques.</p>
+                    <a href="Lab 6/qpaper.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>Using JavaScript</h3>
+                    <p>An introduction to JavaScript, demonstrating basic interactivity and DOM manipulation.</p>
+                    <a href="Lab 7/index.html">View Project</a>
+                </div>
+            </div>
+            <div class="assignment-card">
+                <div class="assignment-content">
+                    <h3>User Defined Functions and Slideshow Using JavaScript</h3>
+                    <p>A dynamic slideshow project that incorporates user-defined functions to enhance interactivity.</p>
+                    <a href="Lab 8b/slide.html">View Project</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <form action="#" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Send Message</button>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 My Personal Website. Designed with inspiration from Magic Film.</p>
+    </footer>
+
+    <script>
+        // Add scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-
+scale=1.0">
+
+<title>Registration Form</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background: linear-gradient(to bottom, #85e8ff, #f69ff1);
+padding: 20px;
+}
+
+form {
+max-width: 600px;
+margin: 0 auto;
+background-color: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+display: inline-block;
+width: 200px;
+margin-bottom: 10px;
+vertical-align: top;
+}
+
+input[type="text"],
+
+input[type="email"],
+input[type="number"],
+textarea,
+select {
+padding: 8px;
+margin-bottom: 10px;
+border-radius: 5px;
+border: 1px solid #ccc;
+
+}
+
+.checkbox-group label {
+display: inline-block;
+width: auto;
+margin-bottom: 5px;
+}
+
+.checkbox-group input[type="checkbox"] {
+margin-right: 10px;
+}
+
+.checkbox-group {
+margin-left: 200px;
+margin-bottom: 15px;
+}
+
+.dob-group {
+display: flex;
+
+gap: 5px; /* Add some space between the selects */
+margin-left: 200px; /* Align it with the other inputs */
+margin-bottom: 15px;
+}
+
+.dob-group select {
+flex-grow: 1;
+padding: 8px;
+border-radius: 5px;
+border: 1px solid #ccc;
+}
+
+.button-group {
+margin-left: 200px;
+}
+
+.button-group button {
+padding: 10px 15px;
+border: none;
+border-radius: 5px;
+background-color: #007bff;
+color: white;
+cursor: pointer;
+margin-right: 10px;
+}
+
+.button-group button[type="reset"] {
+background-color: #6c757d;
+
+}
+h1{
+text-align: center;
+}
+</style>
+</head>
+<body>
+<form>
+<h1>Registration Form</h1>
+<label for="firstName">First Name</label>
+<input type="text" id="firstName" name="firstName"
+
+maxlength="50"><br>
+
+<label for="lastName">Last Name</label>
+<input type="text" id="lastName" name="lastName"
+
+maxlength="50"><br>
+
+<label for="email">Email ID</label>
+<input type="email" id="email" name="email"><br>
+
+<label for="mobile">Mobile Number</label>
+<input type="text" id="mobile" name="mobile"
+
+maxlength="10"><br>
+
+<label>Gender</label>
+<div class="checkbox-group">
+<input type="radio" id="male" name="gender" value="Male">
+<label for="male">Male</label>
+
+<input type="radio" id="female" name="gender"
+
+value="Female">
+
+<label for="female">Female</label>
+</div><br>
+
+<label for="dob">Date of Birth (DOB)</label>
+<div class="dob-group">
+<select id="day" name="day">
+<option value="">Day</option>
+<script>
+for (let i = 1; i <= 31; i++) {
+document.write(`<option
+
+value="${i}">${i}</option>`);
+
+}
+</script>
+</select>
+
+<select id="month" name="month">
+<option value="">Month</option>
+<option value="1">January</option>
+<option value="2">February</option>
+<option value="3">March</option>
+<option value="4">April</option>
+<option value="5">May</option>
+<option value="6">June</option>
+<option value="7">July</option>
+<option value="8">August</option>
+<option value="9">September</option>
+<option value="10">October</option>
+
+<option value="11">November</option>
+<option value="12">December</option>
+</select>
+
+<select id="year" name="year">
+<option value="">Year</option>
+<script>
+for (let i = 2024; i >= 1900; i--) {
+document.write(`<option
+
+value="${i}">${i}</option>`);
+
+}
+</script>
+</select>
+</div><br>
+
+<label for="address">Address</label>
+<textarea id="address" name="address"></textarea><br>
+
+<label for="city">City</label>
+<input type="text" id="city" name="city" maxlength="50"><br>
+
+<label for="pincode">Pin Code</label>
+<input type="text" id="pincode" name="pincode"
+
+maxlength="6"><br>
+
+<label for="state">State</label>
+<input type="text" id="state" name="state" maxlength="50"><br>
+
+<label for="country">Country</label>
+
+<input type="text" id="country" name="country"><br>
+
+<label>Hobbies</label>
+<div class="checkbox-group">
+<input type="checkbox" id="drawing" name="hobbies"
+
+value="Drawing">
+
+<label for="drawing">Drawing</label>
+<input type="checkbox" id="singing" name="hobbies"
+
+value="Singing">
+
+<label for="singing">Singing</label>
+<input type="checkbox" id="dancing" name="hobbies"
+
+value="Dancing">
+
+<label for="dancing">Dancing</label>
+<input type="checkbox" id="sketching" name="hobbies"
+
+value="Sketching">
+
+<label for="sketching">Sketching</label><br>
+<input type="checkbox" id="others" name="hobbies"
+
+value="Others">
+
+<label for="others">Others</label>
+<input type="text" id="otherHobbies" name="otherHobbies"
+
+maxlength="50" placeholder="Ex-Teaching">
+
+</div>
+
+<label>Qualification</label>
+<div class="checkbox-group">
+<input type="checkbox" id="highSchool"
+
+name="qualification" value="High School">
+
+<label for="highSchool">High School (10th)</label><br>
+<input type="checkbox" id="higherSchool"
+
+name="qualification" value="Higher School">
+
+<label for="higherSchool">Higher School (12th)</label><br>
+<input type="checkbox" id="graduation"
+
+name="qualification" value="Graduation">
+
+<label for="graduation">Graduation (Bachelors)</label><br>
+<input type="checkbox" id="postGraduation"
+
+name="qualification" value="Post Graduation">
+
+<label for="postGraduation">Post Graduation
+
+(Masters)</label><br>
+
+<input type="checkbox" id="phd" name="qualification"
+
+value="PhD">
+
+<label for="phd">PhD</label>
+</div>
+
+<label>Courses Applied For</label>
+<div class="checkbox-group">
+<input type="checkbox" id="bca" name="courses"
+
+value="BCA">
+
+<label for="bca">BCA (Bachelor of Computer
+
+Applications)</label><br>
+
+<input type="checkbox" id="bcom" name="courses"
+
+value="B.Com">
+
+<label for="bcom">B.Com (Bachelor of Commerce)</label><br>
+
+<input type="checkbox" id="bsc" name="courses"
+
+value="B.Sc">
+
+<label for="bsc">B.Sc (Bachelor of Science)</label><br>
+
+<input type="checkbox" id="ba" name="courses" value="BA">
+<label for="ba">B.A (Bachelor of Arts)</label><br>
+
+<input type="checkbox" id="mca" name="courses"
+
+value="MCA">
+
+<label for="mca">MCA (Master of Computer
+
+Applications)</label><br>
+
+<input type="checkbox" id="mcom" name="courses"
+
+value="M.Com">
+
+<label for="mcom">M.Com (Master of Commerce)</label><br>
+
+<input type="checkbox" id="msc" name="courses"
+
+value="M.Sc">
+
+<label for="msc">M.Sc (Master of Science)</label><br>
+
+<input type="checkbox" id="ma" name="courses" value="MA">
+<label for="ma">M.A (Master of Arts)</label>
+</div>
+<div class="button-group">
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+</div>
+</form>
+</body>
+</html>
